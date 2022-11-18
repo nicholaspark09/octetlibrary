@@ -1,0 +1,29 @@
+ext.versions = [
+        'major'   : 0,
+        'minor'   : 0,
+        'patch'   : 1,
+        'nav'     : "2.5.1",
+        'retrofit': "2.9.0",
+        'dagger'  : "2.43.2",
+        'ktx'     : "1.7.0",
+        'mockk'   : "1.13.0",
+]
+
+def deps = [
+        'retrofit': [
+                'core'     : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+                'converter': "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+        ],
+        'utils': [
+                'gson': "com.google.code.gson:gson:2.9.0",
+                'loggingInterceptor': "com.squareup.okhttp3:logging-interceptor:4.9.0"
+        ],
+        'test'    : [
+                'junit': [
+                        'core': "junit:junit:4.13.2"
+                ],
+                'mockk': "io.mockk:mockk:$versions.mockk"
+        ]
+]
+
+ext.deps = deps
